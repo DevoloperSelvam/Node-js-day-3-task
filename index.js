@@ -7,7 +7,8 @@ const Student = require('./models/Student');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb://localhost:27017/mentorship', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/mentorship');
+// { useNewUrlParser: true, useUnifiedTopology: true }
  
 // Create Mentor
 app.post('/mentors', async (req, res) => {
